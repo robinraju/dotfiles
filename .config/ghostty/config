@@ -1,0 +1,9 @@
+theme = catappuccin-mocha.conf
+background-blur-radius = 20
+background-opacity = 0.8
+mouse-hide-while-typing = true
+window-decoration = true
+macos-titlebar-style = "transparent"
+macos-option-as-alt = true
+font-family = "JetBrainsMono NF"
+selection-background = "#6c7086"

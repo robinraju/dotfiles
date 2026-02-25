@@ -42,11 +42,21 @@ FORMULAE=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-completions
+  yazi
+  ffmpeg-full
+  sevenzip
+  jq
+  poppler
+  fd
+  ripgrep
+  resvg
+  imagemagick-full
 )
 
 CASKS=(
   ghostty
   font-jetbrains-mono-nerd-font
+  font-symbols-only-nerd-font
 )
 
 info "Updating Homebrew..."

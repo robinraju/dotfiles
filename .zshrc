@@ -93,7 +93,13 @@ npx() {
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   npx "$@"
 }
-
+y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 # Lazy load SDKMAN (saves ~200ms)
 export SDKMAN_DIR="$HOME/.sdkman"
 sdk() {
@@ -172,3 +178,4 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ============================================
 # Environment variables
 # ============================================
+export PATH="/usr/local/opt/imagemagick-full/bin:$PATH"

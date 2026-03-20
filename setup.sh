@@ -51,6 +51,7 @@ FORMULAE=(
   ripgrep
   resvg
   imagemagick-full
+  pyenv
 )
 
 CASKS=(

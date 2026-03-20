@@ -64,7 +64,7 @@ zstyle ':completion:*:kill:*' force-list always
 # Init Oh My Posh
 # ============================================
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/iterm2.json)"
+  eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/robin.json)"
 fi
 
 # ============================================
@@ -100,13 +100,9 @@ y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
-# Lazy load SDKMAN (saves ~200ms)
+# SDKMAN initialization (required for java/sbt candidates on PATH)
 export SDKMAN_DIR="$HOME/.sdkman"
-sdk() {
-  unset -f sdk
-  [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
-  sdk "$@"
-}
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # Lazy load kubectl (saves ~100ms)
 kubectl() {
@@ -157,8 +153,12 @@ alias gst='git stash'
 
 # Misc
 alias cls='clear'
-alias cat='bat --paging=never 2>/dev/null || cat'
 alias grep='grep --color=auto'
+
+# Open buffer line in editor
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
 
 # ============================================
 # Plugins (sourced from Homebrew)
@@ -177,5 +177,10 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ============================================
 # Environment variables
-# ============================================
+============================================
 export PATH="/usr/local/opt/imagemagick-full/bin:$PATH"
+
+# Setup pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"

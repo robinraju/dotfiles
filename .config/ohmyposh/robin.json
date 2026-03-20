@@ -7,12 +7,10 @@
         {
           "background": "#003543",
           "foreground": "#fff",
+          "leading_diamond": "\u256d\u2500\ue0b2",
           "powerline_symbol": "\ue0b0",
-          "options": {
-            "windows": "\uf179"
-          },
-          "style": "powerline",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
+          "style": "diamond",
+          "template": " {{ .Icon }} ",
           "type": "os"
         },
         {
@@ -118,16 +116,20 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#FFD700",
+          "foreground": "#94e2d5",
           "style": "plain",
-          "template": " \u26a1 ",
-          "type": "root"
+          "template": "\u2570\u2500",
+          "type": "text"
         },
         {
-          "foreground": "#f1184c",
+          "foreground": "#89dceb",
+          "foreground_templates": ["{{ if gt .Code 0 }}#74c7ec{{ end }}"],
+          "options": {
+            "always_enabled": true
+          },
           "style": "plain",
-          "template": "🚀 ",
-          "type": "text"
+          "template": "\ue285\ueab6 ",
+          "type": "status"
         }
       ],
       "type": "prompt"
@@ -137,8 +139,8 @@
   "final_space": true,
   "transient_prompt": {
     "background": "transparent",
-    "foreground": "#FFD700",
-    "template": "{{if .Root}}\u26a1 {{end}}🚀 "
+    "foreground": "#f9e2af",
+    "template": "{{ .Shell }}> "
   },
   "secondary_prompt": {
     "background": "transparent",

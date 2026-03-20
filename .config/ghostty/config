@@ -19,6 +19,7 @@ window-padding-y = 8
 window-save-state = always
 window-theme = auto
 window-decoration = true
+unfocused-split-opacity = 0.55
 
 # --- Cursor ---
 cursor-style = bar
@@ -45,7 +46,7 @@ shell-integration = detect
 
 # --- Keybindings ---
   
-macos-option-as-alt = true
+macos-option-as-alt = left
   
 # Tabs
 keybind = cmd+t=new_tab

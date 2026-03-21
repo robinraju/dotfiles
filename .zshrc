@@ -177,7 +177,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ============================================
 # Environment variables
-============================================
+# ============================================
 export PATH="/usr/local/opt/imagemagick-full/bin:$PATH"
 
 # Setup pyenv

@@ -5,9 +5,14 @@
       "alignment": "left",
       "segments": [
         {
+          "foreground": "#89dceb",
+          "style": "plain",
+          "template": "\u256d\u2500<#003543>\ue0b2</>",
+          "type": "text"
+        },
+        {
           "background": "#003543",
           "foreground": "#fff",
-          "leading_diamond": "\u256d\u2500\ue0b2",
           "powerline_symbol": "\ue0b0",
           "style": "diamond",
           "template": " {{ .Icon }} ",

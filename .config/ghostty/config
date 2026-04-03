@@ -77,6 +77,9 @@ keybind = cmd+shift+f=toggle_split_zoom
 # Reload config
 keybind = cmd+shift+comma=reload_config
 
+# Quick fix for british keyboard
+keybind = alt+3=text:#
+
 # --- Performance ---
 # Generous scrollback (25MB)
 scrollback-limit = 25000000

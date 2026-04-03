@@ -52,6 +52,7 @@ FORMULAE=(
   resvg
   imagemagick-full
   pyenv
+  zellij
 )
 
 CASKS=(

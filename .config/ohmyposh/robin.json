@@ -5,7 +5,7 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#89dceb",
+          "foreground": "#74c7ec",
           "style": "plain",
           "template": "\u256d\u2500<#003543>\ue0b2</>",
           "type": "text"
@@ -121,13 +121,13 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#94e2d5",
+          "foreground": "#74c7ec",
           "style": "plain",
           "template": "\u2570\u2500",
           "type": "text"
         },
         {
-          "foreground": "#89dceb",
+          "foreground": "#74c7ec",
           "foreground_templates": ["{{ if gt .Code 0 }}#74c7ec{{ end }}"],
           "options": {
             "always_enabled": true

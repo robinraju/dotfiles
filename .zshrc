@@ -155,6 +155,9 @@ alias gst='git stash'
 alias cls='clear'
 alias grep='grep --color=auto'
 
+# Zellij
+alias z='zellij'
+
 # Open buffer line in editor
 autoload -Uz edit-command-line
 zle -N edit-command-line

@@ -30,7 +30,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PNPM_HOME="$HOME/Library/pnpm"
 
 path=(
-  "$HOME/.antigravity/antigravity/bin"
   "$PNPM_HOME"
   "$BUN_INSTALL/bin"
   "/usr/local/texlive/2023/bin/universal-darwin"
@@ -182,8 +181,3 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Environment variables
 # ============================================
 export PATH="/usr/local/opt/imagemagick-full/bin:$PATH"
-
-# Setup pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
